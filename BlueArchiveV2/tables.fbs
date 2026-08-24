@@ -1,6 +1,3 @@
 table GroundVector3 {
-	X: float; // index 0x1
-	Y: float; // index 0x2
-	Z: float; // index 0x3
 }
 
