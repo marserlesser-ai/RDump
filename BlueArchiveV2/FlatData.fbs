@@ -339,6 +339,14 @@ enum ContentType : int {
 	PermanentRaid = 24
 }
 
+enum StageDifficulty : int {
+	None = 0,
+	Normal = 1,
+	Hard = 2,
+	VeryHard = 3,
+	VeryHard_Ex = 4
+}
+
 enum ParcelType : int {
 	None = 0,
 	Character = 1,
@@ -372,14 +380,6 @@ enum ParcelType : int {
 	ProductSelect = 29,
 	SNSPost = 30,
 	ProductDailyRecord = 31
-}
-
-enum StageDifficulty : int {
-	None = 0,
-	Normal = 1,
-	Hard = 2,
-	VeryHard = 3,
-	VeryHard_Ex = 4
 }
 
 enum StatType : int {
@@ -672,6 +672,21 @@ enum StrategyEnvironment : int {
 	MapFog = 1
 }
 
+enum CCGCharacterType : int {
+	None = 0,
+	Striker = 1,
+	Special = 2
+}
+
+enum RoadPuzzleMapTileType : int {
+	None = 0,
+	Start = 1,
+	End = 2,
+	Transit = 3,
+	Obstacle = 4,
+	Empty = 5
+}
+
 enum OpenConditionContent : int {
 	Shop = 0,
 	Gacha = 1,
@@ -943,67 +958,6 @@ enum ScenarioModeReplayTypes : int {
 	Favor = 2,
 	Work = 3,
 	EventMeetup = 4
-}
-
-enum Club : int {
-	None = 0,
-	Engineer = 1,
-	CleanNClearing = 2,
-	KnightsHospitaller = 3,
-	IndeGEHENNA = 4,
-	IndeMILLENNIUM = 5,
-	IndeHyakkiyako = 6,
-	IndeShanhaijing = 7,
-	IndeTrinity = 8,
-	FoodService = 9,
-	Countermeasure = 10,
-	BookClub = 11,
-	MatsuriOffice = 12,
-	GourmetClub = 13,
-	HoukagoDessert = 14,
-	RedwinterSecretary = 15,
-	Schale = 16,
-	TheSeminar = 17,
-	AriusSqud = 18,
-	Justice = 19,
-	Fuuki = 20,
-	Kohshinjo68 = 21,
-	Meihuayuan = 22,
-	SisterHood = 23,
-	GameDev = 24,
-	anzenkyoku = 25,
-	RemedialClass = 26,
-	SPTF = 27,
-	TrinityVigilance = 28,
-	Veritas = 29,
-	TrainingClub = 30,
-	Onmyobu = 31,
-	Shugyobu = 32,
-	Endanbou = 33,
-	NinpoKenkyubu = 34,
-	Class227 = 35,
-	EmptyClub = 36,
-	Emergentology = 37,
-	RabbitPlatoon = 38,
-	PandemoniumSociety = 39,
-	HotSpringsDepartment = 40,
-	TeaParty = 41,
-	PublicPeaceBureau = 42,
-	Genryumon = 43,
-	BlackTortoisePromenade = 44,
-	LaborParty = 45,
-	KnowledgeLiberationFront = 46,
-	Hyakkayouran = 47,
-	ShinySparkleSociety = 48,
-	AbydosStudentCouncil = 49,
-	CentralControlCenter = 50,
-	FreightLogisticsDepartment = 51,
-	OccultClub = 52,
-	PrefectBrigade = 53,
-	FreeTradeCartel = 54,
-	NicomediasTroop = 55,
-	PublishingDepartment = 56,
-	FoxSquad = 57
 }
 
 enum Tag : int {
@@ -4013,6 +3967,67 @@ enum Tag : int {
 	act = 3003
 }
 
+enum Club : int {
+	None = 0,
+	Engineer = 1,
+	CleanNClearing = 2,
+	KnightsHospitaller = 3,
+	IndeGEHENNA = 4,
+	IndeMILLENNIUM = 5,
+	IndeHyakkiyako = 6,
+	IndeShanhaijing = 7,
+	IndeTrinity = 8,
+	FoodService = 9,
+	Countermeasure = 10,
+	BookClub = 11,
+	MatsuriOffice = 12,
+	GourmetClub = 13,
+	HoukagoDessert = 14,
+	RedwinterSecretary = 15,
+	Schale = 16,
+	TheSeminar = 17,
+	AriusSqud = 18,
+	Justice = 19,
+	Fuuki = 20,
+	Kohshinjo68 = 21,
+	Meihuayuan = 22,
+	SisterHood = 23,
+	GameDev = 24,
+	anzenkyoku = 25,
+	RemedialClass = 26,
+	SPTF = 27,
+	TrinityVigilance = 28,
+	Veritas = 29,
+	TrainingClub = 30,
+	Onmyobu = 31,
+	Shugyobu = 32,
+	Endanbou = 33,
+	NinpoKenkyubu = 34,
+	Class227 = 35,
+	EmptyClub = 36,
+	Emergentology = 37,
+	RabbitPlatoon = 38,
+	PandemoniumSociety = 39,
+	HotSpringsDepartment = 40,
+	TeaParty = 41,
+	PublicPeaceBureau = 42,
+	Genryumon = 43,
+	BlackTortoisePromenade = 44,
+	LaborParty = 45,
+	KnowledgeLiberationFront = 46,
+	Hyakkayouran = 47,
+	ShinySparkleSociety = 48,
+	AbydosStudentCouncil = 49,
+	CentralControlCenter = 50,
+	FreightLogisticsDepartment = 51,
+	OccultClub = 52,
+	PrefectBrigade = 53,
+	FreeTradeCartel = 54,
+	NicomediasTroop = 55,
+	PublishingDepartment = 56,
+	FoxSquad = 57
+}
+
 enum School : int {
 	None = 0,
 	Hyakkiyako = 1,
@@ -4643,51 +4658,6 @@ enum EquipmentCategory : int {
 	WeaponExpGrowthZ = 14
 }
 
-enum PotentialStatBonusRateType : int {
-	None = 0,
-	MaxHP = 1,
-	AttackPower = 2,
-	HealPower = 3
-}
-
-enum VoiceEvent : int {
-	OnTSA = 0,
-	FormationPickUp = 1,
-	CampaignResultDefeat = 2,
-	CampaignResultVictory = 3,
-	CharacterLevelUp = 4,
-	CharacterTranscendence = 5,
-	SkillLevelUp = 6,
-	Formation = 7,
-	CampaignCharacterSpawn = 8,
-	BattleStartTimeline = 9,
-	BattleVictoryTimeline = 10,
-	CharacterFavor = 11,
-	BattleMiss = 12,
-	BattleBlock = 13,
-	BattleCover = 14,
-	BattleMove = 15,
-	BattleMoveToForamtionBeacon = 16,
-	MGS_GameStart = 17,
-	MGS_CharacterSelect = 18,
-	MGS_Attacking = 19,
-	MGS_GeasGet = 20,
-	EXSkill = 21,
-	EXSkillLevel = 22,
-	EXSkill2 = 23,
-	EXSkillLevel2 = 24,
-	EXSkill3 = 25,
-	EXSkillLevel3 = 26,
-	EXSkill4 = 27,
-	EXSkillLevel4 = 28,
-	PublicSkill01 = 29,
-	PublicSkill02 = 30,
-	InteractionPublicSkill01 = 31,
-	InteractionPublicSkill02 = 32,
-	FormationStyleChange = 33,
-	BattleInteractionVictoryTimeline = 34
-}
-
 enum EquipmentOptionType : int {
 	None = 0,
 	MaxHP_Base = 1,
@@ -4786,6 +4756,51 @@ enum EquipmentOptionType : int {
 	EnhanceCompositeArmorRate_Coefficient = 94
 }
 
+enum PotentialStatBonusRateType : int {
+	None = 0,
+	MaxHP = 1,
+	AttackPower = 2,
+	HealPower = 3
+}
+
+enum VoiceEvent : int {
+	OnTSA = 0,
+	FormationPickUp = 1,
+	CampaignResultDefeat = 2,
+	CampaignResultVictory = 3,
+	CharacterLevelUp = 4,
+	CharacterTranscendence = 5,
+	SkillLevelUp = 6,
+	Formation = 7,
+	CampaignCharacterSpawn = 8,
+	BattleStartTimeline = 9,
+	BattleVictoryTimeline = 10,
+	CharacterFavor = 11,
+	BattleMiss = 12,
+	BattleBlock = 13,
+	BattleCover = 14,
+	BattleMove = 15,
+	BattleMoveToForamtionBeacon = 16,
+	MGS_GameStart = 17,
+	MGS_CharacterSelect = 18,
+	MGS_Attacking = 19,
+	MGS_GeasGet = 20,
+	EXSkill = 21,
+	EXSkillLevel = 22,
+	EXSkill2 = 23,
+	EXSkillLevel2 = 24,
+	EXSkill3 = 25,
+	EXSkillLevel3 = 26,
+	EXSkill4 = 27,
+	EXSkillLevel4 = 28,
+	PublicSkill01 = 29,
+	PublicSkill02 = 30,
+	InteractionPublicSkill01 = 31,
+	InteractionPublicSkill02 = 32,
+	FormationStyleChange = 33,
+	BattleInteractionVictoryTimeline = 34
+}
+
 enum ClanRewardType : int {
 	None = 0,
 	AssistTerm = 1,
@@ -4857,13 +4872,6 @@ enum FeverBattleType : int {
 	Arena = 3
 }
 
-enum ScenarioModeSubTypes : int {
-	None = 0,
-	Club = 1,
-	Series1 = 2,
-	Series2 = 3
-}
-
 enum ScenarioModeTypes : int {
 	None = 0,
 	Main = 1,
@@ -4872,6 +4880,21 @@ enum ScenarioModeTypes : int {
 	Mini = 4,
 	SpecialOperation = 5,
 	Prologue = 6
+}
+
+enum ScenarioModeSubTypes : int {
+	None = 0,
+	Club = 1,
+	Series1 = 2,
+	Series2 = 3
+}
+
+enum AccountState : int {
+	WaitingSignIn = 0,
+	Normal = 1,
+	Dormant = 2,
+	Comeback = 3,
+	Newbie = 4
 }
 
 enum CurrencyOverChargeType : int {
@@ -5483,12 +5506,6 @@ enum CCGTagType : int {
 	Summoned = 25
 }
 
-enum CCGCharacterType : int {
-	None = 0,
-	Striker = 1,
-	Special = 2
-}
-
 enum CCGLevelNodeIcon : int {
 	None = 0,
 	Battle = 1,
@@ -5575,15 +5592,6 @@ enum DreamMakerVoiceCondition : int {
 	Success = 2,
 	Perfect = 3,
 	DailyResult = 4
-}
-
-enum RoadPuzzleMapTileType : int {
-	None = 0,
-	Start = 1,
-	End = 2,
-	Transit = 3,
-	Obstacle = 4,
-	Empty = 5
 }
 
 enum RoadPuzzleRailTileType : int {
@@ -5778,15 +5786,15 @@ enum ProductTagType : int {
 	Biweekly = 2
 }
 
+enum ProductSelectSubType : int {
+	Select = 0,
+	AutoSelect = 1
+}
+
 enum AutoSelectPopupType : int {
 	None = 0,
 	FavorItem = 1,
 	GrowthItem = 2
-}
-
-enum ProductSelectSubType : int {
-	Select = 0,
-	AutoSelect = 1
 }
 
 enum ScenarioBGScroll : int {
@@ -5953,6 +5961,35 @@ enum ShopGroupType : int {
 	Chaser = 10
 }
 
+enum ShortcutContentType : int {
+	None = 0,
+	CampaignStage = 1,
+	EventStage = 2,
+	Blood = 3,
+	WeekDungeon = 4,
+	Arena = 5,
+	Raid = 6,
+	Shop = 7,
+	ItemInventory = 8,
+	Craft = 9,
+	SchoolDungeon = 10,
+	Academy = 11,
+	Mission = 12,
+	MultiFloorRaid = 13
+}
+
+enum StickerGetConditionType : int {
+	None = 0,
+	StickerCheckPass = 1,
+	GetStickerCondition = 2
+}
+
+enum StickerCheckPassType : int {
+	None = 0,
+	ClearScenarioModeId = 1,
+	ClearCampaignStageId = 2
+}
+
 enum GetStickerConditionType : int {
 	None = 0,
 	Reset_StikcerGetCondition_AccountLevel = 1,
@@ -6032,18 +6069,6 @@ enum GetStickerConditionType : int {
 	Achieve_StickerGetCondition_ClearFindGiftAndBloodDungeonCount = 75
 }
 
-enum StickerCheckPassType : int {
-	None = 0,
-	ClearScenarioModeId = 1,
-	ClearCampaignStageId = 2
-}
-
-enum StickerGetConditionType : int {
-	None = 0,
-	StickerCheckPass = 1,
-	GetStickerCondition = 2
-}
-
 enum TimeAttackDungeonType : int {
 	None = 0,
 	Defense = 1,
@@ -6111,32 +6136,32 @@ enum MissionCompleteUIPrefabType : int {
 }
 
 table AddressableBlackListExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [AddressableBlackListExcel]; // index 0x1
 }
 
 table AddressableBlackListExcel {
-	Long: long; // index 0x0
-	Offset: [VectorOffset]; // index 0x1
-	Offset: [VectorOffset]; // index 0x2
+	Id: long; // index 0x1
+	FolderPath: [string]; // index 0x2
+	ResourcePath: [string]; // index 0x3
 }
 
 table AddressableWhiteListExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [AddressableWhiteListExcel]; // index 0x1
 }
 
 table AddressableWhiteListExcel {
-	Long: long; // index 0x0
-	Offset: [VectorOffset]; // index 0x1
-	Offset: [VectorOffset]; // index 0x2
+	Id: long; // index 0x1
+	FolderPath: [string]; // index 0x2
+	ResourcePath: [string]; // index 0x3
 }
 
 table AnimationBlendTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [BlendData]; // index 0x1
 }
 
 table BlendData {
-	Offset: [VectorOffset]; // index 0x0
-	Int: int; // index 0x1
+	Type: int; // index 0x1
+	InfoList: [BlendInfo]; // index 0x2
 }
 
 table BlendInfo {
@@ -6146,13 +6171,13 @@ table BlendInfo {
 }
 
 table AnimatorDataTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [AnimatorData]; // index 0x1
 }
 
 table AnimatorData {
-	Offset: [VectorOffset]; // index 0x0
-	: string; // index 0x1
-	: string; // index 0x2
+	DefaultStateName: string; // index 0x1
+	Name: string; // index 0x2
+	DataList: [AniStateData]; // index 0x3
 }
 
 table AniStateData {
@@ -6179,7 +6204,7 @@ table AniEventData {
 }
 
 table BattleExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [BattleExcel]; // index 0x1
 }
 
 table BattleExcel {
@@ -6220,7 +6245,7 @@ table BattleExcel {
 }
 
 table BossPhaseExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [BossPhaseExcel]; // index 0x1
 }
 
 table BossPhaseExcel {
@@ -6231,7 +6256,7 @@ table BossPhaseExcel {
 }
 
 table BuffParticleExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [BuffParticleExcel]; // index 0x1
 }
 
 table BuffParticleExcel {
@@ -6243,7 +6268,7 @@ table BuffParticleExcel {
 }
 
 table CharacterDialogFieldExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [CharacterDialogFieldExcel]; // index 0x1
 }
 
 table CharacterDialogFieldExcel {
@@ -6263,7 +6288,7 @@ table CharacterDialogFieldExcel {
 }
 
 table CheatCodeListExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [CheatCodeListExcel]; // index 0x1
 }
 
 table CheatCodeListExcel {
@@ -6274,35 +6299,35 @@ table CheatCodeListExcel {
 }
 
 table ClearDeckRuleExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ClearDeckRuleExcel]; // index 0x1
 }
 
 table ClearDeckRuleExcel {
-	Long: long; // index 0x0
-	Int: ContentType; // index 0x1
+	ContentType: ContentType; // index 0x1
+	SizeLimit: long; // index 0x2
 }
 
 table ConquestStepExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConquestStepExcel]; // index 0x1
 }
 
 table ConquestStepExcel {
-	Long: long; // index 0x0
-	Long: long; // index 0x1
-	Long: long; // index 0x2
-	Long: long; // index 0x3
-	Long: long; // index 0x4
-	Int: int; // index 0x5
-	: string; // index 0x6
-	Offset: [VectorOffset]; // index 0x7
-	Int: ParcelType; // index 0x8
-	: string; // index 0x9
-	Int: int; // index 0xA
-	Int: StageDifficulty; // index 0xB
+	EventContentId: long; // index 0x1
+	MapDifficulty: StageDifficulty; // index 0x2
+	Step: int; // index 0x3
+	StepGoalLocalize: string; // index 0x4
+	StepEnterScenarioGroupId: long; // index 0x5
+	StepEnterItemType: ParcelType; // index 0x6
+	StepEnterItemUniqueId: long; // index 0x7
+	StepEnterItemAmount: long; // index 0x8
+	UnexpectedEventUnitId: [long]; // index 0x9
+	UnexpectedEventPrefab: string; // index 0xA
+	TreasureBoxObjectId: long; // index 0xB
+	TreasureBoxCountPerStepOpen: int; // index 0xC
 }
 
 table ConstArenaExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstArenaExcel]; // index 0x1
 }
 
 table ConstArenaExcel {
@@ -6342,7 +6367,7 @@ table ConstArenaExcel {
 }
 
 table ConstAudioExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstAudioExcel]; // index 0x1
 }
 
 table ConstAudioExcel {
@@ -6353,7 +6378,7 @@ table ConstAudioExcel {
 }
 
 table ConstCombatExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstCombatExcel]; // index 0x1
 }
 
 table ConstCombatExcel {
@@ -6465,7 +6490,7 @@ table ConstCombatExcel {
 }
 
 table ConstCommonExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstCommonExcel]; // index 0x1
 }
 
 table ConstCommonExcel {
@@ -6473,7 +6498,7 @@ table ConstCommonExcel {
 }
 
 table ConstConquestExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstConquestExcel]; // index 0x1
 }
 
 table ConstConquestExcel {
@@ -6486,7 +6511,7 @@ table ConstConquestExcel {
 }
 
 table ConstContentsExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstContentsExcel]; // index 0x1
 }
 
 table ConstContentsExcel {
@@ -6497,7 +6522,7 @@ table ConstContentsExcel {
 }
 
 table ConstEventCommonExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstEventCommonExcel]; // index 0x1
 }
 
 table ConstEventCommonExcel {
@@ -6518,7 +6543,7 @@ table ConstEventCommonExcel {
 }
 
 table ConstFieldExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstFieldExcel]; // index 0x1
 }
 
 table ConstFieldExcel {
@@ -6530,7 +6555,7 @@ table ConstFieldExcel {
 }
 
 table ConstKeyMappingExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstKeyMappingExcel]; // index 0x1
 }
 
 table ConstKeyMappingExcel {
@@ -6554,7 +6579,7 @@ table ConstKeyMappingExcel {
 }
 
 table ConstMinigameCCGExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstMinigameCCGExcel]; // index 0x1
 }
 
 table ConstMinigameCCGExcel {
@@ -6585,7 +6610,7 @@ table ConstMinigameCCGExcel {
 }
 
 table ConstMinigameRoadPuzzleExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstMinigameRoadPuzzleExcel]; // index 0x1
 }
 
 table ConstMinigameRoadPuzzleExcel {
@@ -6606,7 +6631,7 @@ table ConstMinigameRoadPuzzleExcel {
 }
 
 table ConstMiniGameShootingExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstMiniGameShootingExcel]; // index 0x1
 }
 
 table ConstMiniGameShootingExcel {
@@ -6625,7 +6650,7 @@ table ConstMiniGameShootingExcel {
 }
 
 table ConstMinigameTBGExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstMinigameTBGExcel]; // index 0x1
 }
 
 table ConstMinigameTBGExcel {
@@ -6653,7 +6678,7 @@ table ConstMinigameTBGExcel {
 }
 
 table ConstNewbieContentExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstNewbieContentExcel]; // index 0x1
 }
 
 table ConstNewbieContentExcel {
@@ -6666,7 +6691,7 @@ table ConstNewbieContentExcel {
 }
 
 table ConstStrategyExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ConstStrategyExcel]; // index 0x1
 }
 
 table ConstStrategyExcel {
@@ -6698,7 +6723,7 @@ table ConstStrategyExcel {
 }
 
 table CouponStuffExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [CouponStuffExcel]; // index 0x1
 }
 
 table CouponStuffExcel {
@@ -6710,7 +6735,7 @@ table CouponStuffExcel {
 }
 
 table CumulativeTimeRewardExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [CumulativeTimeRewardExcel]; // index 0x1
 }
 
 table CumulativeTimeRewardExcel {
@@ -6725,7 +6750,7 @@ table CumulativeTimeRewardExcel {
 }
 
 table DefaultCharacterExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [DefaultCharacterExcel]; // index 0x1
 }
 
 table DefaultCharacterExcel {
@@ -6744,7 +6769,7 @@ table DefaultCharacterExcel {
 }
 
 table DefaultEchelonExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [DefaultEchelonExcel]; // index 0x1
 }
 
 table DefaultEchelonExcel {
@@ -6756,7 +6781,7 @@ table DefaultEchelonExcel {
 }
 
 table DefaultFurnitureExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [DefaultFurnitureExcel]; // index 0x1
 }
 
 table DefaultFurnitureExcel {
@@ -6768,7 +6793,7 @@ table DefaultFurnitureExcel {
 }
 
 table DefaultMailExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [DefaultMailExcel]; // index 0x1
 }
 
 table DefaultMailExcel {
@@ -6783,27 +6808,27 @@ table DefaultMailExcel {
 }
 
 table DefaultParcelExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [DefaultParcelExcel]; // index 0x1
 }
 
 table DefaultParcelExcel {
-	Long: long; // index 0x0
-	Long: long; // index 0x1
-	Int: ParcelType; // index 0x2
+	ParcelType: ParcelType; // index 0x1
+	ParcelId: long; // index 0x2
+	ParcelAmount: long; // index 0x3
 }
 
 table EmoticonSpecialExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [EmoticonSpecialExcel]; // index 0x1
 }
 
 table EmoticonSpecialExcel {
-	Long: long; // index 0x0
-	Long: long; // index 0x1
-	: string; // index 0x2
+	UniqueId: long; // index 0x1
+	CharacterUniqueId: long; // index 0x2
+	Random: string; // index 0x3
 }
 
 table EventContentBoxGachaElementExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [EventContentBoxGachaElementExcel]; // index 0x1
 }
 
 table EventContentBoxGachaElementExcel {
@@ -6814,7 +6839,7 @@ table EventContentBoxGachaElementExcel {
 }
 
 table EventContentExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [EventContentExcel]; // index 0x1
 }
 
 table EventContentExcel {
@@ -6825,7 +6850,7 @@ table EventContentExcel {
 }
 
 table FieldContentStageExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldContentStageExcel]; // index 0x1
 }
 
 table FieldContentStageExcel {
@@ -6853,7 +6878,7 @@ table FieldContentStageExcel {
 }
 
 table FieldContentStageRewardExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldContentStageRewardExcel]; // index 0x1
 }
 
 table FieldContentStageRewardExcel {
@@ -6867,7 +6892,7 @@ table FieldContentStageRewardExcel {
 }
 
 table FieldCurtainCallFreeModeExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldCurtainCallFreeModeExcel]; // index 0x1
 }
 
 table FieldCurtainCallFreeModeExcel {
@@ -6878,7 +6903,7 @@ table FieldCurtainCallFreeModeExcel {
 }
 
 table FieldDateExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldDateExcel]; // index 0x1
 }
 
 table FieldDateExcel {
@@ -6901,7 +6926,7 @@ table FieldDateExcel {
 }
 
 table FieldEvidenceExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldEvidenceExcel]; // index 0x1
 }
 
 table FieldEvidenceExcel {
@@ -6914,7 +6939,7 @@ table FieldEvidenceExcel {
 }
 
 table FieldInteractionExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldInteractionExcel]; // index 0x1
 }
 
 table FieldInteractionExcel {
@@ -6935,7 +6960,7 @@ table FieldInteractionExcel {
 }
 
 table FieldKeywordExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldKeywordExcel]; // index 0x1
 }
 
 table FieldKeywordExcel {
@@ -6947,7 +6972,7 @@ table FieldKeywordExcel {
 }
 
 table FieldMasteryExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldMasteryExcel]; // index 0x1
 }
 
 table FieldMasteryExcel {
@@ -6963,7 +6988,7 @@ table FieldMasteryExcel {
 }
 
 table FieldMasteryLevelExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldMasteryLevelExcel]; // index 0x1
 }
 
 table FieldMasteryLevelExcel {
@@ -6975,7 +7000,7 @@ table FieldMasteryLevelExcel {
 }
 
 table FieldMasteryManageExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldMasteryManageExcel]; // index 0x1
 }
 
 table FieldMasteryManageExcel {
@@ -6986,7 +7011,7 @@ table FieldMasteryManageExcel {
 }
 
 table FieldQuestExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldQuestExcel]; // index 0x1
 }
 
 table FieldQuestExcel {
@@ -7004,7 +7029,7 @@ table FieldQuestExcel {
 }
 
 table FieldRewardExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldRewardExcel]; // index 0x1
 }
 
 table FieldRewardExcel {
@@ -7016,46 +7041,46 @@ table FieldRewardExcel {
 }
 
 table FieldSceneExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldSceneExcel]; // index 0x1
 }
 
 table FieldSceneExcel {
-	Long: long; // index 0x0
-	Long: long; // index 0x1
-	Long: long; // index 0x2
-	Long: long; // index 0x3
-	Offset: [VectorOffset]; // index 0x4
-	Offset: [VectorOffset]; // index 0x5
-	Offset: [VectorOffset]; // index 0x6
-	Offset: [VectorOffset]; // index 0x7
-	Offset: [VectorOffset]; // index 0x8
-	Offset: [VectorOffset]; // index 0x9
-	: string; // index 0xA
-	: string; // index 0xB
+	UniqueId: long; // index 0x1
+	DateId: long; // index 0x2
+	GroupId: long; // index 0x3
+	ArtLevelPath: string; // index 0x4
+	DesignLevelPath: string; // index 0x5
+	BGMId: long; // index 0x6
+	ConditionalBGMQuestId: [long]; // index 0x7
+	BeginConditionalBGMScenarioGroupId: [long]; // index 0x8
+	BeginConditionalBGMInteractionId: [long]; // index 0x9
+	EndConditionalBGMScenarioGroupId: [long]; // index 0xA
+	EndConditionalBGMInteractionId: [long]; // index 0xB
+	ConditionalBGMId: [long]; // index 0xC
 }
 
 table FieldSeasonExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldSeasonExcel]; // index 0x1
 }
 
 table FieldSeasonExcel {
-	Long: long; // index 0x0
-	Long: long; // index 0x1
-	Long: long; // index 0x2
-	Long: long; // index 0x3
-	Long: long; // index 0x4
-	Long: long; // index 0x5
-	: string; // index 0x6
-	: string; // index 0x7
-	: string; // index 0x8
-	Int: FieldDialogType; // index 0x9
-	: string; // index 0xA
-	: string; // index 0xB
-	Int: FieldContentType; // index 0xC
+	UniqueId: long; // index 0x1
+	FieldContentType: FieldContentType; // index 0x2
+	EventContentId: long; // index 0x3
+	EntryDateId: long; // index 0x4
+	InstantEntryDateId: long; // index 0x5
+	StartDate: string; // index 0x6
+	EndDate: string; // index 0x7
+	LobbyBGMChangeStageId: long; // index 0x8
+	FieldPrefabControlID: long; // index 0x9
+	FieldGetKeywordCallDialogEnum: FieldDialogType; // index 0xA
+	MasteryImagePath: string; // index 0xB
+	FieldLobbyTitleImagePath: string; // index 0xC
+	KeywordLogoImagePath: string; // index 0xD
 }
 
 table FieldStoryStageExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldStoryStageExcel]; // index 0x1
 }
 
 table FieldStoryStageExcel {
@@ -7072,7 +7097,7 @@ table FieldStoryStageExcel {
 }
 
 table FieldTutorialExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldTutorialExcel]; // index 0x1
 }
 
 table FieldTutorialExcel {
@@ -7083,7 +7108,7 @@ table FieldTutorialExcel {
 }
 
 table FieldWorldMapZoneExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [FieldWorldMapZoneExcel]; // index 0x1
 }
 
 table FieldWorldMapZoneExcel {
@@ -7121,20 +7146,20 @@ table GroundNodeFlat {
 }
 
 table GroundNodeLayerFlat {
-	Offset: [VectorOffset]; // index 0x0
+	Layers: [int8]; // index 0x1
 }
 
 table KatakanaConvertExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [KatakanaConvertExcel]; // index 0x1
 }
 
 table KatakanaConvertExcel {
-	: string; // index 0x0
-	: string; // index 0x1
+	Kr: string; // index 0x1
+	Jp: string; // index 0x2
 }
 
 table KnockBackExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [KnockBackExcel]; // index 0x1
 }
 
 table KnockBackExcel {
@@ -7144,7 +7169,7 @@ table KnockBackExcel {
 }
 
 table LimitedStageExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [LimitedStageExcel]; // index 0x1
 }
 
 table LimitedStageExcel {
@@ -7183,7 +7208,7 @@ table LimitedStageExcel {
 }
 
 table LimitedStageRewardExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [LimitedStageRewardExcel]; // index 0x1
 }
 
 table LimitedStageRewardExcel {
@@ -7197,7 +7222,7 @@ table LimitedStageRewardExcel {
 }
 
 table LimitedStageSeasonExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [LimitedStageSeasonExcel]; // index 0x1
 }
 
 table LimitedStageSeasonExcel {
@@ -7210,23 +7235,23 @@ table LimitedStageSeasonExcel {
 }
 
 table MinigameCardExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [MinigameCardExcel]; // index 0x1
 }
 
 table MinigameCardExcel {
-	Offset: [VectorOffset]; // index 0x0
+	None: [CCGCharacterType]; // index 0x1
 }
 
 table MinigameRoadExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [MinigameRoadExcel]; // index 0x1
 }
 
 table MinigameRoadExcel {
-	Offset: [VectorOffset]; // index 0x0
+	None: [RoadPuzzleMapTileType]; // index 0x1
 }
 
 table NormalSkillTemplateExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [NormalSkillTemplateExcel]; // index 0x1
 }
 
 table NormalSkillTemplateExcel {
@@ -7237,7 +7262,7 @@ table NormalSkillTemplateExcel {
 }
 
 table ObstacleExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ObstacleExcel]; // index 0x1
 }
 
 table ObstacleExcel {
@@ -7260,20 +7285,23 @@ table ObstacleExcel {
 }
 
 table PropVector3 {
+	X: float; // index 0x1
+	Y: float; // index 0x2
+	Z: float; // index 0x3
 }
 
 table PropMotion {
-	Offset: [VectorOffset]; // index 0x0
-	Offset: [VectorOffset]; // index 0x1
-	: string; // index 0x2
+	Name: string; // index 0x1
+	Positions: [PropVector3]; // index 0x2
+	Rotations: [PropVector3]; // index 0x3
 }
 
 table PropRootMotionFlat {
-	Offset: [VectorOffset]; // index 0x0
+	RootMotions: [PropMotion]; // index 0x1
 }
 
 table ProtocolSettingExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ProtocolSettingExcel]; // index 0x1
 }
 
 table ProtocolSettingExcel {
@@ -7285,7 +7313,7 @@ table ProtocolSettingExcel {
 }
 
 table RecipeCraftExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [RecipeCraftExcel]; // index 0x1
 }
 
 table RecipeCraftExcel {
@@ -7302,22 +7330,24 @@ table RecipeCraftExcel {
 }
 
 table Position {
+	X: float; // index 0x1
+	Z: float; // index 0x2
 }
 
 table Motion {
-	Offset: [VectorOffset]; // index 0x0
-	: string; // index 0x1
+	Name: string; // index 0x1
+	Positions: [Position]; // index 0x2
 }
 
 table MoveEnd {
-	Offset: Motion; // index 0x0
-	Offset: Motion; // index 0x1
-	Offset: Motion; // index 0x2
+	Normal: Motion; // index 0x1
+	Stand: Motion; // index 0x2
+	Kneel: Motion; // index 0x3
 }
 
 table Form {
-	Offset: Motion; // index 0x0
-	Offset: MoveEnd; // index 0x1
+	MoveEnd: MoveEnd; // index 0x1
+	PublicSkill: Motion; // index 0x2
 }
 
 table RootMotionFlat {
@@ -7328,7 +7358,7 @@ table RootMotionFlat {
 }
 
 table ScenarioExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ScenarioExcel]; // index 0x1
 }
 
 table ScenarioExcel {
@@ -7344,7 +7374,7 @@ table ScenarioExcel {
 }
 
 table ScenarioReplayExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [ScenarioReplayExcel]; // index 0x1
 }
 
 table ScenarioReplayExcel {
@@ -7360,7 +7390,7 @@ table ScenarioReplayExcel {
 }
 
 table SpecialLobbyIllustExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [SpecialLobbyIllustExcel]; // index 0x1
 }
 
 table SpecialLobbyIllustExcel {
@@ -7373,17 +7403,17 @@ table SpecialLobbyIllustExcel {
 }
 
 table StringTestExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [StringTestExcel]; // index 0x1
 }
 
 table StringTestExcel {
-	: string; // index 0x0
-	: string; // index 0x1
-	Offset: [VectorOffset]; // index 0x2
+	String: [string]; // index 0x1
+	Sentence1: string; // index 0x2
+	Script: string; // index 0x3
 }
 
 table SystemMailExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [SystemMailExcel]; // index 0x1
 }
 
 table SystemMailExcel {
@@ -7396,7 +7426,7 @@ table SystemMailExcel {
 }
 
 table TacticArenaSimulatorSettingExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [TacticArenaSimulatorSettingExcel]; // index 0x1
 }
 
 table TacticArenaSimulatorSettingExcel {
@@ -7418,7 +7448,7 @@ table TacticArenaSimulatorSettingExcel {
 }
 
 table TacticDamageSimulatorSettingExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [TacticDamageSimulatorSettingExcel]; // index 0x1
 }
 
 table TacticDamageSimulatorSettingExcel {
@@ -7442,16 +7472,16 @@ table TacticDamageSimulatorSettingExcel {
 }
 
 table TacticSimulatorSettingExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [TacticSimulatorSettingExcel]; // index 0x1
 }
 
 table TacticSimulatorSettingExcel {
-	Long: long; // index 0x0
-	Long: long; // index 0x1
+	GroundId: long; // index 0x1
+	FixedEchelonId: long; // index 0x2
 }
 
 table TacticTimeAttackSimulatorConfigExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [TacticTimeAttackSimulatorConfigExcel]; // index 0x1
 }
 
 table TacticTimeAttackSimulatorConfigExcel {
@@ -7464,16 +7494,16 @@ table TacticTimeAttackSimulatorConfigExcel {
 }
 
 table TagExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [TagExcel]; // index 0x1
 }
 
 table TagExcel {
-	Int: Club; // index 0x0
-	Int: Tag; // index 0x1
+	Furniture: Tag; // index 0x1
+	None: Club; // index 0x2
 }
 
 table TranscendenceRecipeExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [TranscendenceRecipeExcel]; // index 0x1
 }
 
 table TranscendenceRecipeExcel {
@@ -7487,16 +7517,16 @@ table TranscendenceRecipeExcel {
 }
 
 table VoiceSkillUseExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [VoiceSkillUseExcel]; // index 0x1
 }
 
 table VoiceSkillUseExcel {
-	Offset: [VectorOffset]; // index 0x0
-	: string; // index 0x1
+	Name: string; // index 0x1
+	VoiceHash: [uint]; // index 0x2
 }
 
 table WeekDungeonFindGiftRewardExcelTable {
-	Offset: [VectorOffset]; // index 0x0
+	DataList: [WeekDungeonFindGiftRewardExcel]; // index 0x1
 }
 
 table WeekDungeonFindGiftRewardExcel {
