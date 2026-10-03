@@ -807,7 +807,9 @@ enum ScenarioCharacterAction : int {
 	FalldownRight = 4,
 	Stiff = 5,
 	Hophop = 6,
-	Jump = 7
+	Jump = 7,
+	FalldownLeftAuto = 8,
+	FalldownRightAuto = 9
 }
 
 enum DialogCategory : int {
@@ -4055,7 +4057,8 @@ enum Club : int {
 	NicomediasTroop = 55,
 	PublishingDepartment = 56,
 	FoxSquad = 57,
-	DivingClub = 58
+	DivingClub = 58,
+	Class183 = 59
 }
 
 enum School : int {
@@ -4161,7 +4164,9 @@ enum EchelonType : int {
 	TacticalRelayPierce = 29,
 	TacticalRelayMystic = 30,
 	TacticalRelaySonic = 31,
-	TacticalRelayChemical = 32
+	TacticalRelayChemical = 32,
+	WeekDungeonChaserD = 33,
+	WeekDungeonChaserE = 34
 }
 
 enum AssistRewardType : int {
@@ -4209,7 +4214,8 @@ enum MissionCategory : int {
 	DailySudden = 9,
 	DailyFixed = 10,
 	EventFixed = 11,
-	WelcomeMission = 12
+	WelcomeMission = 12,
+	CharacterAdaptationMission = 13
 }
 
 enum MissionResetType : int {
@@ -4551,6 +4557,14 @@ enum HexaUnitGrade : int {
 enum TacticEnvironment : int {
 	None = 0,
 	WarFog = 1
+}
+
+enum GrowthReturnType : int {
+	None = 0,
+	ExpItemReturn = 1,
+	ExpCreditReturn = 2,
+	EquipmentExpItemReturn = 3,
+	EquipmentCreditReturn = 4
 }
 
 enum ProductionStep : int {
@@ -5022,7 +5036,8 @@ enum RaidBossGroupType : int {
 	EN0006 = 11,
 	EN0010 = 12,
 	EN0013 = 13,
-	EN0022 = 14
+	EN0022 = 14,
+	EN0023 = 15
 }
 
 enum EmblemCategory : int {
@@ -5271,7 +5286,9 @@ enum WeekDungeonType : int {
 	ChaserB = 2,
 	ChaserC = 3,
 	FindGift = 4,
-	Blood = 5
+	Blood = 5,
+	ChaserD = 6,
+	ChaserE = 7
 }
 
 enum SchoolDungeonType : int {
@@ -6638,6 +6655,7 @@ table ConstCommonExcel {
 	ClanMaxMember: long; // index 0x0
 	ClanSearchResultCount: long; // index 0x0
 	ClanMaxApplicant: long; // index 0x0
+	ClanKickHistoryMax: int; // index 0x0
 	ClanRejoinCoolTimeFromSecond: long; // index 0x0
 	ClanWordBalloonMaxCharacter: int; // index 0x0
 	CallNameRenameCoolTimeFromHour: long; // index 0x0
@@ -6787,6 +6805,7 @@ table ConstCommonExcel {
 	TacticalRelayContentsIsOpen: bool; // index 0x0
 	ExSkillLevelMaxByEngrave: int; // index 0x0
 	ExSkillUpgradeLevelMax: int; // index 0x0
+	RaidResetCount: int; // index 0x0
 }
 
 table ConstConquestExcelTable {
